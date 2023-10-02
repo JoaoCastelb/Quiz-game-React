@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gabarito', cursive;
+    background-color: rgb(20, 20, 44);
+    color: rgb(20, 20, 44);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.intro{
+    margin: 20px;
+    border-radius: 20px;
+    background-image: url("../public/background.jpg");
+    background-size: 1500px;
+    height: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.quest-display{
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(117, 143, 196);
+}
+
+.title{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(20, 20, 44);
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 5%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(20, 20, 44);
+    
+}
+
+.answers{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer{
+    width: 150px;
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(20, 20, 44);
+    color: rgb(117,143,196);
+}
+
+.active{
+    width: 150px;
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(20, 20, 44);
+    background-color: rgb(255, 166, 0);
+    box-shadow: inset 3px 3px 1px  rgb(95, 61, 0);
+}
+
+
+.answer:hover{
+    color: rgb(20, 20, 44);
+    background-color: rgb(255, 166, 0);
+}
+
+.start-btn, .check-btn, .play-btn{
+    font-family: 'Gabarito', cursive;
+    font-size: 1.3em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(255, 166, 0);
+    color: rgb(20, 20, 44);
+}
+
+.start-btn:hover, .check-btn:hover, .play-btn:hover{
+    transform: scale(1.05);    
+}
+
+.start-btn:active, .check-btn:active, .play-btn:active, .answer:active{
+    box-shadow: inset 3px 3px 1px  rgb(95, 61, 0); 
+}
+
+
+@media (max-width: 900px) {
+    body{
+        font-size: 70%;
+     }
+
+    .answers {
+        display: grid;
+        grid-template: auto auto / repeat(2, 2fr);
+    }
+
+    .answer{
+        margin-bottom: 10px;
+    }
+
+    .active{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .answers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .answer{
+        margin-bottom: 20px;
+    }
+
+    .active{
+        margin-bottom: 20px;
+    }
+}
+
